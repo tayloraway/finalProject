@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="card-header">
+      Home Page
+    </div>
+    <div class="card-body">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="column">
+                <div class="card">
+                    <div class="card-header bg-danger">
+                        Current Movie!
+                    </div>
+                    <div class="card-body bg-success">
+                            <a [routerLink] = "['/movies']"><img 
+                                [src]="'https://image.tmdb.org/t/p/w500' + movies.results[0].poster_path"
+                                [style.width.px] = "imageWidth"
+                                [style.margin.px] = "imageMargin"
+                                [title] = "movies.results[0].original_title"
+        
+                                >
+                            <p class="text-danger nav-link">{{movies.results[0].original_title}}</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="card-header bg-warning">
+                        Current TV Show!
+                    </div>
+                    <div class="card-body bg-info">
+                        <a [routerLink] = "['/tvshows']"><pm-tvcard></pm-tvcard></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>

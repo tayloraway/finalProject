@@ -1,0 +1,19 @@
+import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { IMovies } from './movies';
+
+
+@Injectable({
+    providedIn:'root'
+})
+
+export class MovieService {
+    constructor(private http: HttpClient){}
+
+    movieUrl = "https://api.themoviedb.org/3/movie/now_playing?api_key=fb4cad8e46da879175b60971f21bee40&language=en-US&page=1";
+    getMovies() :Observable<IMovies[]>
+    {
+        return this.http.get<IMovies[]>(this.movieUrl)
+    }
+}

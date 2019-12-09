@@ -1,0 +1,10 @@
+<div>
+        <img 
+        [src]="'https://image.tmdb.org/t/p/w500' + tvshows.results[0].poster_path"
+        [style.width.px] = "imageWidth"
+        [style.margin.px] = "imageMargin"
+        [title] = "tvshows.results[0].original_title"
+
+        >
+        <p class="text-warning nav-link">{{tvshows.results[0].original_name}}</p>
+</div>
